@@ -94,16 +94,16 @@ const Content = () => {
           <Box sx={{ flexGrow: 1 }} my={14} ml={3}>
             <Grid container spacing={1}>
               <Grid item xs={6}>
-                <Typography variant='h1'>起舞弄“轻影”</Typography>
+                <Typography variant='h1'>凝智成林</Typography>
                 <Typography variant='h4' sx={{ color: '#fd7901' }}>
-                  ———— AI赋能的全新线上舞蹈解决方案
+                  ———— 基于深度学习的语义摘要综合服务平台
                 </Typography>
                 <Box mt={2}>
-                  <Typography variant='h6'>轻影项目组 倾情打造</Typography>
+                  <Typography variant='h6'>凝智项目组 倾情打造</Typography>
                 </Box>
                 <Box mt={1}>
                   <Typography variant='h6'>
-                    人人皆可舞 后疫情时代解决方案
+                    打造音视频高质量摘要新模式
                   </Typography>
                 </Box>
 
@@ -178,10 +178,10 @@ const Content = () => {
           <Divider variant='middle' />
           <Box sx={{ flexGrow: 1, mt: 5 }}>
             <Typography variant='h3' sx={{ textAlign: 'center' }}>
-              Why LightShadow?
+              Why Gatelligence?
             </Typography>
             <Typography variant='h6' sx={{ textAlign: 'center' }} my={2}>
-              本项目是一套AI赋能全新线上舞蹈解决方案
+              本项目是一套基于深度学习的语义摘要综合服务平台
             </Typography>
             <Grid container spacing={2}>
               <Grid item xs={12}>

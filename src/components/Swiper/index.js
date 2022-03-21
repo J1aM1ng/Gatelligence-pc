@@ -19,15 +19,15 @@ export default () => {
   const authorList = useMemo(() => {
     return [
       {
-        avatar: 'https://s4.ax1x.com/2022/03/02/b1Lp1x.jpg',
-        name: '邵嘉明',
+        avatar: 'https://s4.ax1x.com/2022/03/02/b1L9c6.jpg',
+        name: '刘雪炜',
         introduce:
           '  well meaning and kindly well meaning and kindly well meaning and kindly well meaning and kindly',
         github: 'https://github.com/ChelesteWang'
       },
       {
-        avatar: 'https://s4.ax1x.com/2022/03/02/b1L9c6.jpg',
-        name: '刘雪炜',
+        avatar: 'https://s4.ax1x.com/2022/03/02/b1Lp1x.jpg',
+        name: '邵嘉明',
         introduce:
           '  well meaning and kindly well meaning and kindly well meaning and kindly well meaning and kindly',
         github: 'https://github.com/guxuanye'
@@ -47,8 +47,8 @@ export default () => {
         github: 'https://github.com/rexjz'
       },
       {
-        avatar: 'https://s4.ax1x.com/2022/03/02/b1LkHe.jpg',
-        name: '郑智然',
+        avatar: 'https://s1.ax1x.com/2022/03/21/qu5TLF.jpg',
+        name: '蒋一',
         introduce:
           '  well meaning and kindly well meaning and kindly well meaning and kindly well meaning and kindly',
         github: 'https://github.com/huangyunt'
@@ -75,19 +75,19 @@ export default () => {
         github: 'https://github.com/DawnMagnet'
       },
       {
-        avatar: 'https://s4.ax1x.com/2022/03/02/b1LQu8.jpg',
-        name: '杨玉卓',
+        avatar: 'https://s1.ax1x.com/2022/03/21/qu5OiR.jpg',
+        name: '金俊儒',
         introduce:
           '  well meaning and kindly well meaning and kindly well meaning and kindly well meaning and kindly',
         github: 'https://github.com/DawnMagnet'
       },
-      {
-        avatar: 'https://s4.ax1x.com/2022/03/02/b1LlDS.jpg',
-        name: '雷真',
-        introduce:
-          '  well meaning and kindly well meaning and kindly well meaning and kindly well meaning and kindly',
-        github: 'https://github.com/DawnMagnet'
-      }
+      // {
+      //   avatar: 'https://s4.ax1x.com/2022/03/02/b1LlDS.jpg',
+      //   name: '雷真',
+      //   introduce:
+      //     '  well meaning and kindly well meaning and kindly well meaning and kindly well meaning and kindly',
+      //   github: 'https://github.com/DawnMagnet'
+      // }
     ]
   }, [])
   return (

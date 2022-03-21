@@ -25,7 +25,7 @@ const Footer = () => {
               /> */}
               <h1>LightShadow</h1>
               <Box sx={{ fontSize: '12px' }}>
-                © 2022 轻影团队 官方网站
+                © 2022 凝智团队 官方网站
               </Box>
               {/* <Box sx={{ fontSize: '12px' }}>粤ICP备 10241024号</Box> */}
             </Grid>
