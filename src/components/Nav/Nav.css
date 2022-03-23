@@ -1,8 +1,8 @@
 .nav-bar {
   /* border-bottom: gray solid 1px; */
   background-color: #ffffff;
-  font-size: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-size: 2.6667vw;
+  box-shadow: rgba(0, 0, 0, 0.1) 0vw 0.5333vw 1.6vw;
   z-index: 10;
 }
 
@@ -14,7 +14,9 @@
 
 .logo {
   float: left;
-  padding: 10px 10px;
+  padding: 1.3333vw 1.3333vw;
+  /* width: 60px;
+  height: 50px; */
 }
 .button-list {
   float: right;
@@ -24,12 +26,12 @@
 }
 
 .button-list:last-child {
-  margin-right: 50px;
+  margin-right: 6.6667vw;
 }
 
 .button-list > li {
   list-style: none;
   float: right;
-  margin: auto 0px;
-  padding: 15px 10px;
+  margin: auto 0vw;
+  padding: 2vw 1.3333vw;
 }

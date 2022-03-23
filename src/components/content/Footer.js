@@ -23,7 +23,7 @@ const Footer = () => {
                 src={logo}
                 alt='logo'
               /> */}
-              <h1>LightShadow</h1>
+              <h1>Gatelligence</h1>
               <Box sx={{ fontSize: '12px' }}>
                 © 2022 凝智团队 官方网站
               </Box>

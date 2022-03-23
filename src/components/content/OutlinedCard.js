@@ -4,26 +4,34 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 
-const outlinedCard = (title, content) => (
+const outlinedCard = (Url) => (
   <React.Fragment>
     <CardContent>
-      <Typography variant='h4' component='div' sx={{ mt: 1, color: '#fd7901' }}>
+      {/* <Typography variant='h6' component='div' sx={{ mt: 1, color: 'white' }}>
         {title}
       </Typography>
-      <Typography variant='body' component='div' sx={{ mt: 3 }}>
+      <Typography variant='body' component='div' sx={{ mt: 3, color: 'white'}}>
         {content}
-      </Typography>
+      </Typography> */}
+      <Box
+        sx={{
+          width: 200,
+          height: 300
+        }}
+        component="img"
+        alt="图片"
+        src={Url}
+      />
     </CardContent>
   </React.Fragment>
 )
 
 export default function OutlinedCard({
-  title,
-  content
+  Url
 }) {
   return (
-    <Box sx={{ minWidth: 275 }}>
-      <Card variant='outlined'>{outlinedCard(title, content)}</Card>
+    <Box sx={{}}>
+      <Box>{outlinedCard(Url)}</Box>
     </Box>
   )
 }

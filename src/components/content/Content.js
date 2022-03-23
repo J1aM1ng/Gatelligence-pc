@@ -15,6 +15,8 @@ import Link from '@mui/material/Link'
 import OutlinedCard from './OutlinedCard'
 import { Divider } from '@mui/material'
 import Swiper from '../Swiper';
+// import { CenterFocusStrong } from '@mui/icons-material';
+import headerImg from '../../img/header.jpeg'
 
 const theme = responsiveFontSizes(
   createTheme({
@@ -37,33 +39,19 @@ const theme = responsiveFontSizes(
 
 const description = [
   {
-    title: '市场分析 潜力巨大',
-    content:
-      '端云结合 + 人工智能 基于”端云结合“的理念进行程序设计 实现双侧算力 高效运行'
+    Url: 'https://s1.ax1x.com/2022/03/23/q3PrQI.jpg'
   },
   {
-    title: '创新价值 成果显著',
-    content: '业界最佳解决方案 高效率 高准确率 高可信度 高流畅性'
+    Url: 'https://s1.ax1x.com/2022/03/23/q3P5Ss.jpg'
   },
   {
-    title: '功能丰富 深耕领域',
-    content:
-      '教学视频一键分段 AI模型自动打分 基于用户偏好个性推荐'
+    Url: 'https://s1.ax1x.com/2022/03/23/q3Poyq.jpg'
   },
   {
-    title: '创新意义 技术积累',
-    content:
-      '六项实验室技术积累相关专利，八项学生自主申请专利'
+    Url: 'https://s1.ax1x.com/2022/03/23/q3PTO0.jpg'
   },
   {
-    title: '商业闭环 前景理想',
-    content:
-      '集成 B 端和 C 端商业推广 融汇免费版 付费制 订阅制三大盈利模式'
-  },
-  {
-    title: '政策风向',
-    content:
-      '响应国家关于美育工作的要求 扎根一线 传递主旋律正能量'
+    Url: 'https://s1.ax1x.com/2022/03/23/q3PXY4.jpg'
   }
 ];
 
@@ -87,38 +75,74 @@ const Content = () => {
       });
     }, 1000)
   };
+  const styles = {
+    center: {
+      display: 'flex',
+      flexDirection: { xs: 'column', md: 'row' },
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    header: {
+      backgroundImage: `url(${headerImg})`,
+      backgroundSize: '100% 100%',
+      width: '100%',
+      height: '100%',
+      marginLeft: 0,
+      marginRight: 0,
+      marginTop: 0,
+      paddingLeft: 0,
+      paddingRight: 0,
+      paddingTop: 100,
+      paddingBottom: 150
+    },
+    productIssue: {
+      paddingBottom: 50,
+      marginLeft: 15
+    },
+    card: {
+      width: 100
+    }
+  }
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Container maxWidth='lg'>
-          <Box sx={{ flexGrow: 1 }} my={14} ml={3}>
-            <Grid container spacing={1}>
-              <Grid item xs={6}>
-                <Typography variant='h1'>凝智成林</Typography>
-                <Typography variant='h4' sx={{ color: '#fd7901' }}>
-                  ———— 基于深度学习的语义摘要综合服务平台
-                </Typography>
-                <Box mt={2}>
-                  <Typography variant='h6'>凝智项目组 倾情打造</Typography>
+        <Container maxWidth='lg'
+        >
+          <Box sx={{ flexGrow: 1 }} my={14} ml={3} style={styles.header}>
+            <Grid container spacing={1}
+              justify="flex-end"
+              alignItems="center">
+              <Grid item xs={12}>
+                <Typography>&nbsp;</Typography>
+                <Typography>&nbsp;</Typography>
+                <Box style={styles.center}>
+                  <Typography variant='h2' style={{ fontWeight: 'bold' }}>凝智成林语义摘要综合服务平台</Typography>
                 </Box>
-                <Box mt={1}>
-                  <Typography variant='h6'>
-                    打造音视频高质量摘要新模式
+                <Box style={styles.center}>
+                  <Typography variant='h4' sx={{ color: '#fd7901' }}>
                   </Typography>
                 </Box>
 
-                <Box sx={{ mt: 5 }}>
+                <Box mt={2} style={styles.center}>
+                  <Typography variant='h6'>凝智项目组 倾情打造&nbsp;&nbsp; | &nbsp;&nbsp;实现音视频高质量转化摘要总结新模式</Typography>
+                </Box>
+                <Box mt={1} style={styles.center}>
+                  <Typography variant='h6'>
+
+                  </Typography>
+                </Box>
+                <Box sx={{ mt: 5 }} style={styles.center}>
                   <Box
                     component='span'
                     sx={{
                       display: 'inline-block',
                       height: '40px',
                       lineHeight: '38px',
-                      width: '176px',
+                      width: '300px',
                       textAlign: 'center',
                       mr: 1,
                       p: 1,
-                      background: '#333333',
+                      background: '#7B68EE',
                       '&:hover': {
                         opacity: 0.7
                       }
@@ -131,10 +155,11 @@ const Content = () => {
                       href='https://app.cupof.beer:8083/download'
                       onClick={() => fetchData()}
                     >
-                      {'立即体验'}
+                      {`立即体验\u00A0\u00A0\u00A0 | \u00A0\u00A0\u00A0 ${downloadNum} 次安装`}
+                      <FileDownloadOutlinedIcon sx={{ position: 'relative', left: '10px', top: '4px' }} />
                     </Link>
                   </Box>
-                  <Box
+                  {/* <Box
                     component='span'
                     sx={{
                       display: 'inline-block',
@@ -149,50 +174,35 @@ const Content = () => {
                       }
                     }}
                   >
-                    {/* <Link
-                      color={'#000000'}
-                      variant='h6'
-                      underline='none'
-                      href='#'
-                      cursor='default'
-                    > */}
                     <Typography
                       color={'#000000'}
                       variant='h6'>
                       {`${downloadNum} 次安装`}
                       <FileDownloadOutlinedIcon sx={{ position: 'relative', left: '10px', top: '4px' }} />
                     </Typography>
-                    {/* </Link> */}
-                  </Box>
+                  </Box> */}
                 </Box>
-              </Grid>
-              <Grid item xs={6}>
-                <img
-                  src='https://s4.ax1x.com/2022/03/01/bMoC24.jpg'
-                  alt='LightShadow'
-                  width='500px'
-                />
               </Grid>
             </Grid>
           </Box>
           <Divider variant='middle' />
           <Box sx={{ flexGrow: 1, mt: 5 }}>
-            <Typography variant='h3' sx={{ textAlign: 'center' }}>
-              Why Gatelligence?
-            </Typography>
-            <Typography variant='h6' sx={{ textAlign: 'center' }} my={2}>
-              本项目是一套基于深度学习的语义摘要综合服务平台
-            </Typography>
+            <Box style={styles.productIssue}>
+              <Typography variant='h5' sx={{ textAlign: 'left', fontWeight: 'bold'}}>
+                产品理念 &nbsp;| &nbsp;如何让每一次学习更加高效？
+              </Typography>
+            </Box>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <Grid
                   container
-                  rowSpacing={1}
-                  columnSpacing={{ xs: 1, sm: 2, md: 3, mt: 3 }}
+                  // rowSpacing={1}
+                  columnSpacing={{ xs: 1, sm: 2, md: 2, mt: 2 }}
+                  columns={15}
                 >
                   {description.map((item) => (
-                    <Grid item xs={4} key={item.title}>
-                      <OutlinedCard title={item.title} content={item.content} />
+                    <Grid item xs={3} key={item.Url} style={styles.card}>
+                      <OutlinedCard Url={item.Url}/>
                     </Grid>
                   ))}
                 </Grid>
@@ -200,10 +210,14 @@ const Content = () => {
             </Grid>
           </Box>
           <Divider variant='middle' sx={{ mt: 5 }} />
-          <Typography variant='h3' sx={{ textAlign: 'center', mt: 5 }}>
-            团队成员
-          </Typography>
-          <Swiper />
+          <Box sx={{ flexGrow: 1, mt: 5 }}>
+            <Box style={styles.productIssue}>
+              <Typography variant='h5' sx={{ textAlign: 'left', fontWeight: 'bold'}}>
+                产品实力 &nbsp;| &nbsp;如何让凝智3.0真正走入大众视野？
+              </Typography>
+            </Box>
+            <Swiper />
+          </Box>
         </Container>
       </ThemeProvider>
     </>

@@ -1,6 +1,7 @@
 .swiper {
   width: 100%;
-  height: 320px;
+  height: 300px;
+  margin-bottom: 100px;
 }
 .swiper-backface-hidden .swiper-slide {
   transform: scale(0.7);
@@ -10,7 +11,7 @@
 }
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 2.4vw;
   transform: scale(0.7);
   transition: transform 0.2s;
   /* Center slide text vertically */
@@ -34,7 +35,7 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: 10px;
+  bottom: 1.3333vw;
   left: 0;
   width: 100%;
 }

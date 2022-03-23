@@ -1,7 +1,6 @@
 import React from 'react'
-// import Link from '@mui/material/Link'
 import './Nav.css'
-// import Box from '@mui/material/Box'
+import logo from '../../img/成林logo.png'
 
 export default class Hello extends React.Component {
   render(){
@@ -9,9 +8,9 @@ export default class Hello extends React.Component {
       <div className='nav-bar'>
         <div className='logo'>
           <img
-            width='170'
-            src='https://s4.ax1x.com/2022/03/01/bM7dDs.png'
-            alt='lightshadow logo'
+            width='80'
+            src={logo}
+            alt='凝智成林 logo'
           />
         </div>
         <ul className='button-list'>
