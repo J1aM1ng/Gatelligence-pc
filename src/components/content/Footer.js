@@ -2,29 +2,36 @@ import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import { Container } from '@mui/material'
 
+const isMobile = document.documentElement.clientWidth < 450;
 const Footer = () => {
   return (
     <Box sx={{ backgroundColor: '#333333', color: '#f8f4f8' }}>
-      <Container maxWidth='lg'>
-        <Box sx={{ height: '150px', marginTop: '65px' }}>
+      <Container>
+        <Box sx={isMobile ? {
+          height: '150px',
+          marginTop: '65px',
+          width: `${document.documentElement.clientWidth}`
+        }
+          : { height: '150px', marginTop: '65px' }}>
           <Grid
             container
             rowSpacing={1}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
-            <Grid item xs={3}>
-              {/* <img
-                style={{
-                  height: '45px',
-                  marginBottom: '30px',
-                  marginTop: '30px',
-                  width: '160px'
-                }}
-                src={logo}
-                alt='logo'
-              /> */}
-              <h1>Gatelligence</h1>
-              <Box sx={{ fontSize: '12px' }}>
+            <Grid item xs={12}>
+              <Box style={isMobile ? {
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              } : {}}>
+                <h1>Gatelligence</h1>
+              </Box>
+
+              <Box sx={{ fontSize: '12px' }} style={isMobile ? {
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              } : {}}>
                 © 2022 凝智团队 官方网站
               </Box>
               {/* <Box sx={{ fontSize: '12px' }}>粤ICP备 10241024号</Box> */}

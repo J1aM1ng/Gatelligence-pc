@@ -40,7 +40,7 @@ export default () => {
   return (
     <>
       <Swiper
-        style={isMobile ? {height: 700} : {}}
+        style={isMobile ? {height: 900, width: '100%'} : {}}
         initialSlide={0}
         slidesPerView={3}
         spaceBetween={20}

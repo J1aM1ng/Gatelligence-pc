@@ -22,7 +22,10 @@ const outlinedCard = (Url) => (
         {content}
       </Typography> */}
       <Box
-        sx={{
+        sx={isMobile ? {
+          width: 300,
+          height: 450
+        } :{
           width: 200,
           height: 300
         }}
