@@ -36,19 +36,19 @@ export default () => {
       },
     ]
   }, [])
+  const isMobile = document.documentElement.clientWidth < 450;
   return (
     <>
       <Swiper
+        style={isMobile ? {height: 700} : {}}
         initialSlide={0}
         slidesPerView={3}
         spaceBetween={20}
-        // pagination={{
-        //   clickable: true
-        // }}
         centeredSlides={true}
         // allowTouchMove={false}
         // longSwipes={false}
         // followFinger={false}
+        direction={!isMobile ? 'horizontal' : 'vertical'}
         modules={[Pagination, Autoplay]}
         loop
         className='mySwiper'
@@ -70,7 +70,8 @@ export default () => {
 }
 
 export function BasicCard(props) {
-  const { Url } = props
+  const { Url } = props;
+  const isMobile = document.documentElement.clientWidth < 450;
   return (
     <Box>
       <Box
@@ -82,8 +83,8 @@ export function BasicCard(props) {
       >
         <img
           style={{
-            height: '300px',
-            width: '450px',
+            height: !isMobile ? '40vh' : '40vh',
+            width: !isMobile ? '30vw' : '100vw',
           }}
           src={Url}
           alt='Img'

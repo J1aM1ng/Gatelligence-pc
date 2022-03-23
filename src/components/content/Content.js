@@ -17,6 +17,8 @@ import { Divider } from '@mui/material'
 import Swiper from '../Swiper';
 // import { CenterFocusStrong } from '@mui/icons-material';
 import headerImg from '../../img/header.jpeg'
+import mobileHeader from '../../img/mobile/mobileHeader.png'
+import styled from '@emotion/styled';
 
 const theme = responsiveFontSizes(
   createTheme({
@@ -57,6 +59,7 @@ const description = [
 
 const Content = () => {
   const [downloadNum, setDownloadNum] = useState('');
+  const isMobile = document.documentElement.clientWidth < 450;
   useEffect(() => {
     axios.get('https://app.cupof.beer:8083/download-count').then((res) => {
       // console.log(res);
@@ -83,7 +86,7 @@ const Content = () => {
       justifyContent: 'center',
     },
     header: {
-      backgroundImage: `url(${headerImg})`,
+      backgroundImage: `url(${isMobile ? mobileHeader : headerImg})`,
       backgroundSize: '100% 100%',
       width: '100%',
       height: '100%',
@@ -101,6 +104,11 @@ const Content = () => {
     },
     card: {
       width: 100
+    },
+    mobilecard: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     }
   }
   return (
@@ -116,7 +124,11 @@ const Content = () => {
                 <Typography>&nbsp;</Typography>
                 <Typography>&nbsp;</Typography>
                 <Box style={styles.center}>
-                  <Typography variant='h2' style={{ fontWeight: 'bold' }}>凝智成林语义摘要综合服务平台</Typography>
+                  {isMobile ?
+                    <Typography variant='h3' style={{ fontWeight: 'bold', textAlign: 'center' }}>凝智成林语义摘要综合服务平台</Typography>
+                    :
+                    <Typography variant='h2' style={{ fontWeight: 'bold' }}>凝智成林语义摘要综合服务平台</Typography>
+                  }
                 </Box>
                 <Box style={styles.center}>
                   <Typography variant='h4' sx={{ color: '#fd7901' }}>
@@ -124,7 +136,12 @@ const Content = () => {
                 </Box>
 
                 <Box mt={2} style={styles.center}>
-                  <Typography variant='h6'>凝智项目组 倾情打造&nbsp;&nbsp; | &nbsp;&nbsp;实现音视频高质量转化摘要总结新模式</Typography>
+                  {isMobile ?
+                    <Typography variant='h6' style={{textAlign: 'center'}}>凝智项目组 倾情打造&nbsp;&nbsp; | &nbsp;&nbsp;实现音视频高质量转化摘要总结新模式</Typography>
+                    :
+                    <Typography variant='h6'>凝智项目组 倾情打造&nbsp;&nbsp; | &nbsp;&nbsp;实现音视频高质量转化摘要总结新模式</Typography>
+                  }
+
                 </Box>
                 <Box mt={1} style={styles.center}>
                   <Typography variant='h6'>
@@ -134,7 +151,19 @@ const Content = () => {
                 <Box sx={{ mt: 5 }} style={styles.center}>
                   <Box
                     component='span'
-                    sx={{
+                    sx={isMobile ? {
+                      display: 'inline-block',
+                      height: '40px',
+                      lineHeight: '38px',
+                      width: '300px',
+                      textAlign: 'center',
+                      mr: 1,
+                      p: 1,
+                      background: 'black',
+                      '&:hover': {
+                        opacity: 0.7
+                      }
+                    } : {
                       display: 'inline-block',
                       height: '40px',
                       lineHeight: '38px',
@@ -188,7 +217,7 @@ const Content = () => {
           <Divider variant='middle' />
           <Box sx={{ flexGrow: 1, mt: 5 }}>
             <Box style={styles.productIssue}>
-              <Typography variant='h5' sx={{ textAlign: 'left', fontWeight: 'bold'}}>
+              <Typography variant='h5' sx={{ textAlign: 'left', fontWeight: 'bold' }}>
                 产品理念 &nbsp;| &nbsp;如何让每一次学习更加高效？
               </Typography>
             </Box>
@@ -201,8 +230,8 @@ const Content = () => {
                   columns={15}
                 >
                   {description.map((item) => (
-                    <Grid item xs={3} key={item.Url} style={styles.card}>
-                      <OutlinedCard Url={item.Url}/>
+                    <Grid item xs={!isMobile ? 3 : 15} key={item.Url} style={styles.card}>
+                      <OutlinedCard Url={item.Url} />
                     </Grid>
                   ))}
                 </Grid>
@@ -212,7 +241,7 @@ const Content = () => {
           <Divider variant='middle' sx={{ mt: 5 }} />
           <Box sx={{ flexGrow: 1, mt: 5 }}>
             <Box style={styles.productIssue}>
-              <Typography variant='h5' sx={{ textAlign: 'left', fontWeight: 'bold'}}>
+              <Typography variant='h5' sx={{ textAlign: 'left', fontWeight: 'bold' }}>
                 产品实力 &nbsp;| &nbsp;如何让凝智3.0真正走入大众视野？
               </Typography>
             </Box>

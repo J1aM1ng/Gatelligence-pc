@@ -4,9 +4,17 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 
+const isMobile = document.documentElement.clientWidth < 450;
+const styles = {
+  mobilecard: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+}
 const outlinedCard = (Url) => (
   <React.Fragment>
-    <CardContent>
+    <CardContent style={isMobile ? styles.mobilecard : ''}>
       {/* <Typography variant='h6' component='div' sx={{ mt: 1, color: 'white' }}>
         {title}
       </Typography>
