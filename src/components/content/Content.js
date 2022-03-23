@@ -16,10 +16,11 @@ import OutlinedCard from './OutlinedCard'
 import { Divider } from '@mui/material'
 import Swiper from '../Swiper';
 // import { CenterFocusStrong } from '@mui/icons-material';
-import headerImg from '../../img/header.jpeg'
-import mobileHeader from '../../img/mobile/mobileHeader.png'
+// import headerImg from '../../img/header.jpeg'
 import styled from '@emotion/styled';
 
+const mobileHeader = 'https://s1.ax1x.com/2022/03/23/q3JXSs.jpg';
+const headerImg = 'https://s1.ax1x.com/2022/03/23/q3akE6.jpg'
 const theme = responsiveFontSizes(
   createTheme({
     typography: {

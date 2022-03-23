@@ -14,7 +14,7 @@ const styles = {
 }
 const outlinedCard = (Url) => (
   <React.Fragment>
-    <CardContent style={isMobile ? styles.mobilecard : ''}>
+    <CardContent style={isMobile ? styles.mobilecard : {}}>
       {/* <Typography variant='h6' component='div' sx={{ mt: 1, color: 'white' }}>
         {title}
       </Typography>
