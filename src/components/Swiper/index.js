@@ -26,7 +26,8 @@ export default () => {
         img: 'https://s1.ax1x.com/2022/03/23/q3Agjs.jpg',
       },
       {
-        img: 'https://s1.ax1x.com/2022/03/23/q3A5NT.jpg',
+        // img: 'https://s1.ax1x.com/2022/03/23/q3A5NT.jpg',
+        img: 'https://s1.ax1x.com/2022/03/27/qwzLlT.jpg',
       },
       {
         img: 'https://s1.ax1x.com/2022/03/23/q3AI4U.jpg',
@@ -40,7 +41,7 @@ export default () => {
   return (
     <>
       <Swiper
-        style={isMobile ? {height: 900, width: '100%'} : {}}
+        style={isMobile ? {height: 900, width: '100%', backgroundSize: '300px 270px'} : {}}
         initialSlide={0}
         slidesPerView={3}
         spaceBetween={20}
